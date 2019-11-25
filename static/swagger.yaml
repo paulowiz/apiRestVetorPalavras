@@ -1,0 +1,96 @@
+---
+swagger: "2.0"
+info:
+  description: "<font size=\"2\" color=\"red\">Licença</font>"
+  version: "1.0.3"
+  title: "API GERA VOCABULÁRIO"
+  license:
+    name: "Paulo "
+    url: "http://paulo.com.br"
+host: "localhost:5000"
+tags:
+- name: "ROTAS"
+  description: "<br><br>"
+schemes:
+- "http"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+
+
+
+paths:
+  /geraVocabularioIsolado:
+    post:
+      tags:
+      - "ROTAS"
+      description: "Esse método faz algo bem legal"
+      summary: Gera vocabulário de um conjunto de textos
+      parameters:
+        - in: body
+          name: item
+          required: true
+          schema:
+            $ref: '#/definitions/NoteRequest'
+      responses:
+        '201':
+          description: Success
+          schema:
+            $ref: '#/definitions/NoteResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+
+
+  /geraVetoresDuplos:
+    post:
+      tags:
+      - "ROTAS"
+      description: "Esse método faz algo bem legal"
+      summary: Gera os vetores (2-gram) dos textos enviados na API
+      parameters:
+        - in: body
+          name: item
+          required: true
+          schema:
+            $ref: '#/definitions/NoteRequest'
+      responses:
+        '201':
+          description: Success
+          schema:
+            $ref: '#/definitions/NoteResponse'
+        default:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+            
+            
+            
+            
+
+  /swagger:
+    x-swagger-pipe: swagger_raw
+definitions:
+  NoteRequest:
+    properties:
+      title:
+        type: string
+      desc:
+        type: string
+  NoteResponse:
+    properties:
+      title:
+        type: string
+      desc:
+        type: string
+      id:
+        type: number
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

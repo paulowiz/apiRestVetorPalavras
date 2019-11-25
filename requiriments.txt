@@ -4,3 +4,5 @@ flask
 flask_restful
 configparser
 mysql-connector
+flask-swagger
+flask-swagger-ui
