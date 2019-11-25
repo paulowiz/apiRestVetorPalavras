@@ -88,7 +88,5 @@ def gera_vocabulario_duplo():
     return jsonify(voc)
 
 
-
-# Apaga esse comentário, pra voce poder mudar a porta quando quiser
 if __name__ == '__main__':
     app.run( host='127.0.0.1', port='5000', debug=True)
