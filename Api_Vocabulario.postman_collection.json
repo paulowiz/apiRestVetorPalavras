@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "e75be755-79fa-4796-8fea-c49d0ebef8cc",
+		"name": "Api_Vocabulario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "geraVetoresIsolados",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"textos\":[\"Falar é fácil. Mostre-me o código.\",\"É fácil escrever código. Difícil é escrever código que funcione.\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/geraVetoresIsolados",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"geraVetoresIsolados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "geraVocabularioIsolado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"textos\":[\"Falar é fácil. Mostre-me o código.\",\"É fácil escrever código. Difícil é escrever código que funcione.\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/geraVocabularioIsolado",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"geraVocabularioIsolado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "geraVetoresDuplos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"textos\":[\"Falar é fácil. Mostre-me o código.\",\"É fácil escrever código. Difícil é escrever código que funcione.\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/geraVetoresDuplos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"geraVetoresDuplos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "geraVocabularioDuplo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"textos\":[\"Falar é fácil. Mostre-me o código.\",\"É fácil escrever código. Difícil é escrever código que funcione.\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/geraVocabularioDuplo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"geraVocabularioDuplo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

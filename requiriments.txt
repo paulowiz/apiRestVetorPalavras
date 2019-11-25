@@ -1,0 +1,6 @@
+nltk
+collections
+flask
+flask_restful
+configparser
+mysql-connector
