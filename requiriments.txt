@@ -1,5 +1,4 @@
 nltk
-collections
 flask
 flask_restful
 configparser
