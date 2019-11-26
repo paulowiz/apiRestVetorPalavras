@@ -31,6 +31,12 @@ def handle_404_error(_error):
     return make_response(jsonify({'error': 'Rota nao encontrada, acesse /documentacao'}), 404)
 
 # Endpoint que gera os vetores isolados dos textos enviados na API
+@app.route('/getLogs', methods=["GET"])
+def get_logs():
+    result = db.getLog(con)
+    return jsonify(result)
+
+# Endpoint que gera os vetores isolados dos textos enviados na API
 @app.route('/geraVetoresIsolados', methods=["POST"])
 def gera_vetores_isolados():
     array = []
