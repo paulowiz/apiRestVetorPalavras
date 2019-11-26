@@ -4,7 +4,13 @@ API que gera dois tipos de vocabulário referente a um conjunto de textos.
 
 ## 📌Endpoints:
 
-Fooram criados quatro endpoints do tipo POST no qual todos eles ao receber um conjunto de textos irão ter seus respectivos retornos.
+Foram criados quatro endpoints do tipo POST no qual todos eles ao receber um conjunto de textos irão ter seus respectivos retornos.
+
+### /getLogs
+
+Retorna os logs de requisições em um banco hospedado na nuvem.
+
+![image](https://user-images.githubusercontent.com/18649504/69592388-7fcf5900-0fd4-11ea-9280-71d3c734e8dc.png)
 
 ### /geraVetoresIsolados 
 
@@ -36,11 +42,13 @@ Gera o vocabulario duplo (2-gram) dos textos que foram enviados
 
 <img src="https://user-images.githubusercontent.com/18649504/66262823-725cd600-e7be-11e9-9cea-ea14305079db.png" width = "100">
 
+<img src="https://user-images.githubusercontent.com/18649504/69592604-2ae01280-0fd5-11ea-827f-00963982ea74.png" width = "100">
+
 ## Estrutura do Projeto 📌
  |-- controller
- |-- functions.py
+    |-- functions.py
  |-- database
- |-- conexao.py
+     |-- conexao.py
  |-- config.ini
  |-- main.py
  |-- requiriments.txt
