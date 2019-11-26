@@ -30,7 +30,7 @@ class conexao:
 
     def getLog(self, con):
         cur = con.cursor()
-        query = "SELECT * FROM LOG_API"
+        query = "SELECT * FROM LOG_API ORDER BY LOG_SEQ DESC"
         cur.execute(query)
         result = cur.fetchall()
         return result
