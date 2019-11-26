@@ -44,14 +44,27 @@ Gera o vocabulario duplo (2-gram) dos textos que foram enviados
 
 <img src="https://user-images.githubusercontent.com/18649504/69592604-2ae01280-0fd5-11ea-827f-00963982ea74.png" width = "100">
 
-## Estrutura do Projeto 📌
- |-- controller
-    |-- functions.py
- |-- database
-     |-- conexao.py
- |-- config.ini
- |-- main.py
- |-- requiriments.txt
+## 📌 Estrutura do Projeto 
+    |-- controller
+         |--functions.py
+    |-- database
+         |--conexao.py
+    |-- database
+         |--conexao.py
+    |-- config.ini
+    |-- main.py
+    |-- requiriments.txt    
+    
+functions.py -> Classe que possui todas as funções de processamento do codigo
+<br>
+conexao.py -> Classe que gera a conexão do banco de dados mysql e executa queries
+<br>
+config.ini -> configuração do banco de dados
+<br>
+main.py -> executar o server local da API e gerencia endpoints
+<br>
+requiriments.txt -> bibliotecas utilizadas no python 
+<br>
 
 ## 📢 Como executar
 
