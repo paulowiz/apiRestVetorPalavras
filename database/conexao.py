@@ -28,16 +28,16 @@ class conexao:
             print("Erro ao logar no banco de dados.")
             exit()
 
-    def getPaginas(self, con):
+    def getLog(self, con):
         cur = con.cursor()
-        query = 'select * from log_api'
+        query = "SELECT * FROM LOG_API"
         cur.execute(query)
         result = cur.fetchall()
         return result
 
-    def getPaginas(self, con):
+    def insereLog(self, con,LOG_METODO,LOG_ENDPOINT,LOG_ENVIO,LOG_RETORNO,LOG_STF_COD):
         cur = con.cursor()
-        query = 'insert into log_api(data_req,payload,status_retorno,payload_retorno)values()'
+        query = """insert into LOG_API(LOG_DT,LOG_METODO,LOG_ENDPOINT,LOG_ENVIO,LOG_RETORNO,LOG_STF_COD)values(NOW(),'%s','%s',"%s","%s",%s)"""%(LOG_METODO,LOG_ENDPOINT,LOG_ENVIO,LOG_RETORNO,LOG_STF_COD)
         cur.execute(query)
-        result = cur.fetchall()
-        return result
+        con.commit()
+        return print('Dados inseridos com sucesso!')
