@@ -22,15 +22,15 @@ fc = fc.funcoes()
 #Rota Padrão
 @app.route('/')
 def start():
-    return make_response(jsonify({'success':'Api Funcionando acesse /documentacao'}))
+    return make_response(jsonify({'success':'Api Funcionando'}))
 
 # Tratativa erro 404
 @app.errorhandler(404)
 def handle_404_error(_error):
     """Return a http 404 error to client"""
-    return make_response(jsonify({'error': 'Rota nao encontrada, acesse /documentacao'}), 404)
+    return make_response(jsonify({'error': 'Rota nao encontrada,'}), 404)
 
-# Endpoint que gera os vetores isolados dos textos enviados na API
+# Endpoint que retorna os logs de requisção
 @app.route('/getLogs', methods=["GET"])
 def get_logs():
     result = db.getLog(con)
@@ -46,7 +46,7 @@ def gera_vetores_isolados():
     db.insereLog(con,'POST','geraVetoresIsolados',textos,array,200)
     return jsonify(array)
 
-# Endpoint que gera o vocabulário de um conjunto de textos
+# Endpoint que gera o vocabulário isolado de um conjunto de textos
 @app.route("/geraVocabularioIsolado", methods=["POST"])
 def gera_vocabulario_isolado():
     array = []

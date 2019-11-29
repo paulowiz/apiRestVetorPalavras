@@ -4,7 +4,13 @@ API que gera dois tipos de vocabulário referente a um conjunto de textos.
 
 ## 📌Endpoints:
 
-Fooram criados quatro endpoints do tipo POST no qual todos eles ao receber um conjunto de textos irão ter seus respectivos retornos.
+Foram criados quatro endpoints do tipo POST no qual todos eles ao receber um conjunto de textos irão ter seus respectivos retornos.
+
+### /getLogs
+
+Retorna os logs de requisições em um banco hospedado na nuvem.
+
+![image](https://user-images.githubusercontent.com/18649504/69592388-7fcf5900-0fd4-11ea-9280-71d3c734e8dc.png)
 
 ### /geraVetoresIsolados 
 
@@ -36,14 +42,29 @@ Gera o vocabulario duplo (2-gram) dos textos que foram enviados
 
 <img src="https://user-images.githubusercontent.com/18649504/66262823-725cd600-e7be-11e9-9cea-ea14305079db.png" width = "100">
 
-## Estrutura do Projeto 📌
- |-- controller
- |-- functions.py
- |-- database
- |-- conexao.py
- |-- config.ini
- |-- main.py
- |-- requiriments.txt
+<img src="https://user-images.githubusercontent.com/18649504/69592604-2ae01280-0fd5-11ea-827f-00963982ea74.png" width = "100">
+
+## 📌 Estrutura do Projeto 
+    |-- controller
+         |--functions.py
+    |-- database
+         |--conexao.py
+    |-- database
+         |--conexao.py
+    |-- config.ini
+    |-- main.py
+    |-- requiriments.txt    
+    
+functions.py -> Classe que possui todas as funções de processamento do codigo
+<br>
+conexao.py -> Classe que gera a conexão do banco de dados mysql e executa queries
+<br>
+config.ini -> configuração do banco de dados
+<br>
+main.py -> executar o server local da API e gerencia endpoints
+<br>
+requiriments.txt -> bibliotecas utilizadas no python 
+<br>
 
 ## 📢 Como executar
 
